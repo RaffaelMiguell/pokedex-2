@@ -14,6 +14,6 @@
 -   JAVASCRIPT
 -   GITHUB
 
-[Clique aqui para visualizar](https://raffaelmiguell.github.io/pokedex-v2/)
+[Clique aqui para visualizar](https://raffaelmiguell.github.io/pokedex-2/)
 
 # pokedex
