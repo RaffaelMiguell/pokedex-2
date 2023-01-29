@@ -1,6 +1,6 @@
 const idParaIncluirLista = document.getElementById('pokemonList')
 const btnLoad = document.getElementById('btnLoad')
-const limit = 10
+const limit = 12
 let offset = 0
 
 // iniciando consumo da api pokeapi
@@ -45,5 +45,4 @@ loadPokemonsItens(offset, limit)
 btnLoad.addEventListener('click', () => {
    offset += limit
    loadPokemonsItens(offset, limit)
-   console.log('hello world, my brother/sister')
 })
