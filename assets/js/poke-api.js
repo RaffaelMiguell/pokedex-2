@@ -20,6 +20,10 @@ function convertForClassPokemon(pokemonDetails) {
     pokemon.ability = ability
 
     pokemon.photo = pokemonDetails.sprites.other.home.front_default
+    
+    // pokemon.photo = pokemonDetails.sprites.versions['generation-v']['black-white'].animated.front_default;
+
+
 
     // console.log(pokemon)
     return pokemon
