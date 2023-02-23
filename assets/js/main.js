@@ -1,6 +1,6 @@
 const idParaIncluirLista = document.getElementById('pokemonList')
 const btnLoad = document.getElementById('btnLoad')
-const limit = 1
+const limit = 3
 let offset = 0
 
 // iniciando consumo da api pokeapi
