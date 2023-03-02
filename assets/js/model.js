@@ -5,5 +5,9 @@ class Pokemon {
     types = []
     ability
     abilities = []
+    stats
+    stat = []
+    base_stat = []
     photo
+    photoAnimation
 }
