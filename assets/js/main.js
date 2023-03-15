@@ -1,6 +1,6 @@
 const idParaIncluirLista = document.getElementById('pokemonList')
 const btnLoad = document.getElementById('btnLoad')
-const limit = 3
+const limit = 6
 let offset = 0
 
 // iniciando consumo da api pokeapi
@@ -34,19 +34,21 @@ function loadPokemonsItens(offset, limit) {
                 </div>
             
                 <div class="cardMoreDetails ${pokemon.type}" id="card-${pokemon.numberId}">
-                        <table>
+                    <div class="moreDetails">
+                        <table class="tbCard">
                             <tbody>
                             <!-- inserido o método "index" para que seja possível realizar o callback, utilizado no baseStats (estudar mais a respeito) -->
                                 ${pokemon.stats.map((stat, index) => `
                                     <tr>
-                                    <td class="MoreDetails">${stat}</td>
-                                    <td class="type">${pokemon.baseStats[index]}</td>
+                                    <td class="tdColumnL">&nbsp&nbsp${stat}</td>
+                                    <td class="tdColumnR">${pokemon.baseStats[index]}</td>
                                     </tr>
                                     `).join('')
                                     }
-                                <img src="${pokemon.photoAnimation}" alt="Imagem do Pokemon ${pokemon.name}"/>
                             </tbody>
                         </table>
+                        <img class="imgMoreDetails"src="${pokemon.photoAnimation}" alt="Imagem do Pokemon ${pokemon.name}"/>
+
                         <button class="btnClose" onclick="hidePopUp(${
                             pokemon.numberId
                         })">
@@ -67,6 +69,7 @@ function loadPokemonsItens(offset, limit) {
                               ></path>
                           </svg>
                         </button>
+                    </div>
                 </div>
             
                 <button class="btnShow" onclick="showPopUp(${pokemon.numberId})">
@@ -114,7 +117,7 @@ function showPopUp(numberId) {
 function hidePopUp(numberId) {
     const card = document.querySelector(`#card-${numberId}`)
 
-    card.classList.remove('show')
+   card.classList.remove('show')
 
     // setTimeout(() => {
     //     card.classList.remove("show");
@@ -125,6 +128,6 @@ function closeWindows() {
     const cards = document.querySelectorAll('.cardMoreDetails')
     // verificar todos os cards e remove a classe "show"
     cards.forEach(card => {
-        card.classList.remove('show')
+       card.classList.remove('show')
     })
 }
